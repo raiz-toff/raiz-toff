@@ -6,7 +6,7 @@ Starting from **tech repair roots** to becoming a **certified network engineer (
 Recently graduating in **Computer Systems & Network Technology**, I’m now advancing toward **CCNP** while deepening my skills in **routing, switching, Linux, virtualization, and automation**.  
 Naturally curious, hands-on, and always exploring better ways to design efficient, resilient infrastructure that solves real-world problems.
 
-[💼 Add me on LinkedIn](https://www.linkedin.com/in/rjneupane) • [🚀 Explore Projects](http://127.0.0.1:3002/?serverWindowId=e150d40f-bf69-4ff8-ab04-a2c467f89367#projects)
+[💼 Add me on LinkedIn](https://www.linkedin.com/in/rjneupane) • [🚀 Explore Projects](https://rajkumarneupane.com/Projects.html)
 
 ---
 
@@ -43,13 +43,13 @@ Verified skills in **Networking & AI**
 
 ### 🧠 Blog & Lab Journals  
 Documenting experiments, troubleshooting paths, and storytelling around the infrastructure projects I am building.  
-[📚 View all posts →](http://127.0.0.1:3002/Blogs.html)
+[📚 View all posts →](https://rajkumarneupane.com/Blogs.html)
 
 ---
 
 ## 💡 Highlighted Projects  
 Selected work worth sharing.  
-[🧩 View all work →](http://127.0.0.1:3002/Projects.html)
+[🧩 View all work →](https://rajkumarneupane.com/Projects.html)
 
 > 🚧 Featured projects coming soon.
 
