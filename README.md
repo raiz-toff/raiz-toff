@@ -1,49 +1,52 @@
-# 👋 Hi, I'm Rajkumar Neupane
+<h1 align="center">Hey 👋What's Up?</h1>
 
-### 🛡️ Network Engineer & Web Developer | CCNA & CCST Certified
-Based in Toronto, I am a Computer Systems Technician graduate with a deep passion for **infrastructure automation**, **cybersecurity**, and **building robust networking solutions**. I bridge the gap between traditional networking and modern DevOps practices.
+###
 
----
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=ts" height="60" alt="typescript logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=nextjs" height="60" alt="nextjs logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=tailwind" height="60" alt="tailwindcss logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" height="60" alt="storybook logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=graphql" height="60" alt="graphql logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=go" height="60" alt="go logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=rust" height="60" alt="rust logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=nestjs" height="60" alt="nestjs logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=py" height="60" alt="python logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=aws" height="60" alt="amazonwebservices logo"  />
+</div>
 
-### 🚀 Technical Arsenal
+###
 
-#### **🌐 Networking & Infrastructure**
-*   **Routing & Switching**: OSPF, BGP (Fundamentals), VLANs, STP, EtherChannel, FHRP (HSRP/GLBP).
-*   **Security**: Stateful Firewalls, ACLs, IPsec VPN, Layer 2 Security (DAI, DHCP Snooping), AAA.
-*   **Cloud & Systems**: AWS Networking, Virtual Private Clouds (VPC), Docker, Linux Administration (Ubuntu Specialist).
-*   **Virtualization**: Proxmox VE, VMware ESXi/Workstation, EVE-NG & CML Lab Emulation.
+<div align="center">
+  <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
+  <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="twitter logo"  />
+  <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="discord logo"  />
+  <img src="https://img.shields.io/static/v1?message=Twitch&logo=twitch&label=&color=9146FF&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="twitch logo"  />
+  <img src="https://img.shields.io/static/v1?message=dev.to&logo=dev.to&label=&color=0A0A0A&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="devto logo"  />
+</div>
 
-#### **🤖 Automation & Development**
-*   **Languages**: Python (Logic control, Data parsing).
-*   **Tools**: Ansible (Infrastructure as Code), REST APIs (Postman), Git & GitHub CI/CD.
-*   **Web**: Full-stack web application development.
+###
 
----
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=maurodesouza&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  />
+  <img src="https://github-profile-trophy.vercel.app?username=maurodesouza&theme=dracula&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false&order=4" height="150" alt="trophy graph"  />
+</div>
 
-### 🏆 Certifications
-*   **CCNA** (Cisco Certified Network Associate)
-*   **CCST** (Cisco Certified Support Technician) - Networking & Security
-*   **Google IT Support Professional Certificate**
+###
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/pacman-contribution-graph.svg">
+</picture>
 
-### 📂 Featured Labs & Projects
-*   **[Inter-VLAN Routing Lab](https://rajkumarneupane.com/projects/intervlan_routing_lab/)**: Implementing ROAS and traditional inter-vlan communication.
-*   **[Multi-vendor Discovery Lab](https://rajkumarneupane.com/projects/multi_vendor/)**: Scalable hybrid environment using CDP and LLDP.
-*   **[Earning Tracker Web App](https://rajkumarneupane.com/projects/earningtrackerwebapp/)**: A full-stack solution for financial management.
-
----
-
-### 📊 GitHub Stats
-![Rajkumar's GitHub stats](https://github-readme-stats.vercel.app/api?username=raiz-toff&show_icons=true&theme=transparent)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=raiz-toff&layout=compact&theme=transparent)
-
----
-
-### 📫 Connect with Me
-*   🌍 **Portfolio**: [rajkumarneupane.com](https://rajkumarneupane.com/)
-*   💼 **LinkedIn**: [in/rjneupane](https://www.linkedin.com/in/rjneupane/)
-*   📧 **Email**: [n.rajkumar.workspace@gmail.com](mailto:n.rajkumar.workspace@gmail.com)
-
----
-*"Automating the world, one packet at a time."*
+###
