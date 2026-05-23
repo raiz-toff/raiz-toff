@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 20" style="background: transparent;">
+  <style>
+    @keyframes synActive {
+      0%, 25% { fill: #388bfd; }
+      25.1%, 100% { fill: #26354a; }
+    }
+    @keyframes arrow1Active {
+      0%, 15% { fill: #26354a; }
+      15.1%, 35% { fill: #00f2fe; }
+      35.1%, 100% { fill: #26354a; }
+    }
+    @keyframes synAckActive {
+      0%, 35% { fill: #26354a; }
+      35.1%, 60% { fill: #00f2fe; }
+      60.1%, 100% { fill: #26354a; }
+    }
+    @keyframes arrow2Active {
+      0%, 50% { fill: #26354a; }
+      50.1%, 70% { fill: #388bfd; }
+      70.1%, 100% { fill: #26354a; }
+    }
+    @keyframes ackActive {
+      0%, 60% { fill: #26354a; }
+      60.1%, 85% { fill: #388bfd; }
+      85.1%, 100% { fill: #26354a; }
+    }
+    @keyframes arrow3Active {
+      0%, 75% { fill: #26354a; }
+      75.1%, 90% { fill: #3fb950; }
+      90.1%, 100% { fill: #26354a; }
+    }
+    @keyframes establishedActive {
+      0%, 85% { fill: #26354a; }
+      85.1%, 98% { fill: #3fb950; }
+      98.1%, 100% { fill: #26354a; }
+    }
+    @keyframes blinkLED {
+      0%, 85% { fill: #26354a; }
+      85.1%, 91% { fill: #3fb950; }
+      91.1%, 97% { fill: #1f2937; }
+      97.1%, 100% { fill: #26354a; }
+    }
+    .syn { animation: synActive 6s infinite; }
+    .arrow1 { animation: arrow1Active 6s infinite; }
+    .syn-ack { animation: synAckActive 6s infinite; }
+    .arrow2 { animation: arrow2Active 6s infinite; }
+    .ack { animation: ackActive 6s infinite; }
+    .arrow3 { animation: arrow3Active 6s infinite; }
+    .established { animation: establishedActive 6s infinite; }
+    .led { animation: blinkLED 6s infinite; }
+  </style>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#26354a">
+    <!-- SYN -->
+    <text x="15" y="14" text-anchor="middle" class="syn">SYN</text>
+    
+    <!-- Arrow 1 -->
+    <text x="45" y="14" text-anchor="middle" class="arrow1">➔</text>
+    
+    <!-- SYN-ACK -->
+    <text x="90" y="14" text-anchor="middle" class="syn-ack">SYN-ACK</text>
+    
+    <!-- Arrow 2 -->
+    <text x="135" y="14" text-anchor="middle" class="arrow2">➔</text>
+    
+    <!-- ACK -->
+    <text x="165" y="14" text-anchor="middle" class="ack">ACK</text>
+    
+    <!-- Arrow 3 -->
+    <text x="195" y="14" text-anchor="middle" class="arrow3">➔</text>
+    
+    <!-- LED Dot -->
+    <circle cx="218" cy="10.5" r="3.2" class="led" />
+    
+    <!-- ESTABLISHED -->
+    <text x="228" y="14" class="established">ESTABLISHED</text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 36" width="140" height="36">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#05070f" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="0.5" y="0.5" width="139" height="35" rx="8" fill="url(#bg)" stroke="url(#border)" stroke-width="1" />
+  
+  <!-- Icon: Cisco Router -->
+  <g transform="translate(18, 18)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="9" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <path d="M -5 -5 L 5 5 M 5 -5 L -5 5" stroke="#38bdf8" stroke-width="1.2" />
+    <path d="M -5 -2 L -5 -5 L -2 -5 M 5 2 L 5 5 L 2 5 M 2 -5 L 5 -5 L 5 -2 M -2 5 L -5 5 L -5 2" stroke="#38bdf8" stroke-width="1.2" fill="none" />
+  </g>
+  
+  <!-- Text -->
+  <text x="38" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">Cisco CCNA</text>
+  <circle cx="125" cy="18" r="3" fill="#22c55e" filter="url(#glow)" />
+</svg>

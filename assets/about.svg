@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 165" width="100%" height="100%" style="background: transparent;">
+  <style>
+    /* Default Light Mode Styles */
+    .title-text { fill: #0f172a; font-weight: 700; font-size: 16px; }
+    .subtitle-text { fill: #475569; font-weight: 500; font-size: 13px; }
+    .col-title-net { fill: #0284c7; font-weight: 700; font-size: 14px; }
+    .col-title-build { fill: #d97706; font-weight: 700; font-size: 14px; }
+    .col-title-work { fill: #15803d; font-weight: 700; font-size: 14px; }
+    .body-text { fill: #334155; font-weight: 500; font-size: 12px; }
+    .quote-text { fill: #0f766e; font-style: italic; font-weight: 600; font-size: 13px; }
+
+    /* Dark Mode (Tokyonight Theme) Styles */
+    @media (prefers-color-scheme: dark) {
+      .title-text { fill: #f8fafc; }
+      .subtitle-text { fill: #94a3b8; }
+      .col-title-net { fill: #7dcfff; }
+      .col-title-build { fill: #ff9e64; }
+      .col-title-work { fill: #9ece6a; }
+      .body-text { fill: #cbd5e1; }
+      .quote-text { fill: #73daca; }
+    }
+  </style>
+
+  <!-- Content Group -->
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.1">
+    <!-- Header -->
+    <text x="25" y="20" class="title-text">Networking Professional &amp; Infrastructure Tinkerer</text>
+    <text x="25" y="38" class="subtitle-text">Based in Toronto, obsessed with:</text>
+    
+    <!-- Column 1: Networking -->
+    <text x="25" y="68" class="col-title-net">Networking</text>
+    <text x="25" y="88" class="body-text">Cisco Catalyst, MikroTik,</text>
+    <text x="25" y="105" class="body-text">CML, and building</text>
+    <text x="25" y="122" class="body-text">robust homelabs.</text>
+    
+    <!-- Column 2: Building -->
+    <text x="295" y="68" class="col-title-build">Building</text>
+    <text x="295" y="88" class="body-text">Crafting offline-first</text>
+    <text x="295" y="105" class="body-text">tools with Python and</text>
+    <text x="295" y="122" class="body-text">React Native.</text>
+    
+    <!-- Column 3: Workflow -->
+    <text x="565" y="68" class="col-title-work">Workflow</text>
+    <text x="565" y="88" class="body-text">Documentation,</text>
+    <text x="565" y="105" class="body-text">automation, and</text>
+    <text x="565" y="122" class="body-text">continuous learning.</text>
+    
+    <!-- Footer Quote -->
+    <text x="400" y="152" text-anchor="middle" class="quote-text">“Documentation is my favorite part of the stack.”</text>
+  </g>
+</svg>

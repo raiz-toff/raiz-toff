@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 36" width="140" height="36">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#05070f" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#9f1239" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="0.5" y="0.5" width="139" height="35" rx="8" fill="url(#bg)" stroke="url(#border)" stroke-width="1" />
+  
+  <!-- Icon: Terminal Console -->
+  <g transform="translate(18, 18)" filter="url(#glow)">
+    <rect x="-8" y="-6" width="16" height="12" rx="2" fill="none" stroke="#f43f5e" stroke-width="1.5" />
+    <path d="M -5 -2 L -3 0 L -5 2" fill="none" stroke="#f43f5e" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="-1" y1="2" x2="3" y2="2" stroke="#f43f5e" stroke-width="1.2" stroke-linecap="round" />
+  </g>
+  
+  <!-- Text -->
+  <text x="38" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">Linux OS</text>
+  <circle cx="125" cy="18" r="3" fill="#f43f5e" filter="url(#glow)" />
+</svg>
