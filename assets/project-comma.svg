@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 154" style="background: transparent;">
+  <style>
+    /* Default Light Mode Styles */
+    .card-border { stroke: #cbd5e1; }
+    .packet { stroke: #0284c7; }
+    .title-text { fill: #0f172a; }
+    .meta-text { fill: #64748b; }
+    .body-text { fill: #334155; font-weight: 500; }
+    .chip-text { fill: #0284c7; font-weight: 700; }
+    .chip-dot { fill: #94a3b8; }
+
+    /* Dark Mode (Tokyonight Theme) Styles */
+    @media (prefers-color-scheme: dark) {
+      .card-border { stroke: #26354a; }
+      .packet { stroke: #00f2fe; }
+      .title-text { fill: #f8fafc; }
+      .meta-text { fill: #8b949e; }
+      .body-text { fill: #cbd5e1; }
+      .chip-text { fill: #7dcfff; }
+      .chip-dot { fill: #565f89; }
+    }
+  </style>
+
+  <!-- Card frame -->
+  <rect x="2" y="2" width="476" height="150" rx="12" fill="none" class="card-border" stroke-width="1.5" />
+
+  <!-- Packet orbiting the card -->
+  <rect x="2" y="2" width="476" height="150" rx="12" fill="none" class="packet" stroke-width="2.5"
+        stroke-linecap="round" stroke-dasharray="22 1209.4">
+    <animate attributeName="stroke-dashoffset" from="1231.4" to="0" dur="7s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- Status LED -->
+  <circle cx="28" cy="30" r="4" fill="#3fb950">
+    <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Header -->
+  <g font-family="'Courier New', Courier, monospace">
+    <text x="42" y="36" font-size="17" font-weight="700" class="title-text">comma</text>
+    <text x="454" y="35" font-size="12" text-anchor="end" class="meta-text">v1.2.0 · APK + PWA</text>
+  </g>
+
+  <!-- Description -->
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" letter-spacing="0.1">
+    <text x="28" y="68" class="body-text">Earnings tracker for gig workers — shifts, GPS mileage,</text>
+    <text x="28" y="87" class="body-text">expenses, and real tax estimates. Local-first: everything</text>
+    <text x="28" y="106" class="body-text">stays on your phone. No account, no cloud.</text>
+  </g>
+
+  <!-- Stack chips -->
+  <text x="28" y="134" font-family="'Courier New', Courier, monospace" font-size="12" letter-spacing="0.3"
+        class="chip-text">React Native<tspan class="chip-dot"> · </tspan>Expo<tspan class="chip-dot"> · </tspan>TypeScript<tspan class="chip-dot"> · </tspan>SQLite</text>
+</svg>

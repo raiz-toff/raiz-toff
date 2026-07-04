@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 42" style="background: transparent;">
+  <style>
+    .card-border { stroke: #cbd5e1; }
+    .icon-stroke { stroke: #0284c7; }
+    .label-text { fill: #334155; }
+    @media (prefers-color-scheme: dark) {
+      .card-border { stroke: #26354a; }
+      .icon-stroke { stroke: #7dcfff; }
+      .label-text { fill: #cbd5e1; }
+    }
+  </style>
+
+  <rect x="1.5" y="1.5" width="121" height="39" rx="12" fill="none" class="card-border" stroke-width="1.5" />
+
+  <g transform="translate(18, 12)" fill="none" class="icon-stroke" stroke-width="1.5">
+    <circle cx="9" cy="9" r="7.5" />
+    <path d="M9 1.5a11.5 11.5 0 0 1 3 7.5 11.5 11.5 0 0 1-3 7.5 11.5 11.5 0 0 1-3-7.5 11.5 11.5 0 0 1 3-7.5z" />
+    <path d="M1.5 9h15" />
+  </g>
+
+  <text x="46" y="26.5" font-family="'Courier New', Courier, monospace" font-size="14" font-weight="700" letter-spacing="0.5" class="label-text">website</text>
+</svg>
