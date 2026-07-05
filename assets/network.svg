@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 170" style="background: transparent;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 148" style="background: transparent;">
   <style>
     /* Default Light Mode Styles */
-    .pipe { stroke: #e2e8f0; }
+    .pipe { stroke: #dde3ea; }
     .spark { stroke: #0284c7; }
     .node { fill: #0284c7; }
     .console-text { fill: #64748b; }
@@ -12,10 +12,10 @@
 
     /* Dark Mode (Tokyonight Theme) Styles */
     @media (prefers-color-scheme: dark) {
-      .pipe { stroke: #26354a; }
+      .pipe { stroke: #2b3950; }
       .spark { stroke: #00f2fe; }
       .node { fill: #00f2fe; }
-      .console-text { fill: #8b949e; }
+      .console-text { fill: #98a4b3; }
       .cloud { stroke: #00f2fe; }
       .cursor { fill: #00f2fe; }
       .p1 { fill: #388bfd; } .p2 { fill: #44a5ff; } .p3 { fill: #58a6ff; }
@@ -38,17 +38,17 @@
   <!-- BACKGROUND: Base Conduits -->
   <g fill="none" class="pipe" stroke-linecap="round" stroke-linejoin="round">
     <!-- Pipe 1 (Top Wave) -->
-    <path d="M -50 35 L 150 35 L 300 55 L 500 35 L 700 55 L 850 35 L 1050 35" stroke-width="12">
+    <path d="M -40 30 L 125 30 L 249 46 L 415 30 L 581 46 L 705 30 L 870 30" stroke-width="10">
       <animate attributeName="opacity" values="0.4; 1; 0.4" dur="3.5s" repeatCount="indefinite" />
     </path>
 
     <!-- Pipe 2 (Middle Wave) -->
-    <path d="M -50 75 L 150 75 L 300 55 L 500 75 L 700 95 L 850 75 L 1050 75" stroke-width="24">
+    <path d="M -40 62 L 125 62 L 249 46 L 415 62 L 581 78 L 705 62 L 870 62" stroke-width="20">
       <animate attributeName="opacity" values="0.5; 1; 0.5" dur="4s" repeatCount="indefinite" />
     </path>
 
     <!-- Pipe 3 (Bottom Wave) -->
-    <path d="M -50 115 L 150 115 L 300 95 L 500 115 L 700 95 L 850 115 L 1050 115" stroke-width="16">
+    <path d="M -40 94 L 125 94 L 249 78 L 415 94 L 581 78 L 705 94 L 870 94" stroke-width="13">
       <animate attributeName="opacity" values="0.6; 1; 0.6" dur="4.5s" repeatCount="indefinite" />
     </path>
   </g>
@@ -56,53 +56,38 @@
   <!-- FOREGROUND: Moving Packet Sparks -->
   <g fill="none" class="spark" stroke-linecap="round" stroke-linejoin="round">
     <!-- Spark on Pipe 1 -->
-    <path d="M -50 35 L 150 35 L 300 55 L 500 35 L 700 55 L 850 35 L 1050 35"
+    <path d="M -40 30 L 125 30 L 249 46 L 415 30 L 581 46 L 705 30 L 870 30"
           stroke-width="3.5" stroke-dasharray="10 140">
       <animate attributeName="stroke-dashoffset" from="300" to="0" dur="1.2s" repeatCount="indefinite" />
     </path>
 
     <!-- Spark on Pipe 2 -->
-    <path d="M -50 75 L 150 75 L 300 55 L 500 75 L 700 95 L 850 75 L 1050 75"
-          stroke-width="4.5" stroke-dasharray="15 210">
-      <animate attributeName="stroke-dashoffset" from="450" to="0" dur="1.5s" repeatCount="indefinite" />
+    <path d="M -40 62 L 125 62 L 249 46 L 415 62 L 581 78 L 705 62 L 870 62"
+          stroke-width="4.5" stroke-dasharray="14 196">
+      <animate attributeName="stroke-dashoffset" from="420" to="0" dur="1.5s" repeatCount="indefinite" />
     </path>
 
     <!-- Spark on Pipe 3 -->
-    <path d="M -50 115 L 150 115 L 300 95 L 500 115 L 700 95 L 850 115 L 1050 115"
-          stroke-width="3.5" stroke-dasharray="12 168">
-      <animate attributeName="stroke-dashoffset" from="360" to="0" dur="1.8s" repeatCount="indefinite" />
+    <path d="M -40 94 L 125 94 L 249 78 L 415 94 L 581 78 L 705 94 L 870 94"
+          stroke-width="3.5" stroke-dasharray="12 156">
+      <animate attributeName="stroke-dashoffset" from="336" to="0" dur="1.8s" repeatCount="indefinite" />
     </path>
   </g>
 
   <!-- JUNCTION NODES -->
   <g class="node">
-    <circle cx="300" cy="55" r="5" />
-    <circle cx="700" cy="95" r="5" />
+    <circle cx="249" cy="46" r="4.5" />
+    <circle cx="581" cy="78" r="4.5" />
   </g>
 
-  <!-- CONSOLE TEXT -->
-  <text x="450" y="152" font-family="'Courier New', Courier, monospace" font-size="18" class="console-text" text-anchor="end" letter-spacing="1.2">
-    &gt; Let's get that
-  </text>
-
-  <text x="500" y="152" font-family="'Courier New', Courier, monospace" font-size="18" text-anchor="middle" letter-spacing="1.2">
-    <tspan class="p1">p</tspan><tspan class="p2">a</tspan><tspan class="p3">c</tspan><tspan class="p4">k</tspan><tspan class="p5">e</tspan><tspan class="p6">t</tspan>
-  </text>
-
-  <text x="550" y="152" font-family="'Courier New', Courier, monospace" font-size="18" class="console-text" text-anchor="start" letter-spacing="1.2">
-    moving
-  </text>
+  <!-- CONSOLE TEXT (single centered line — no overlap between segments) -->
+  <text x="415" y="134" font-family="'Courier New', Courier, monospace" font-size="18" text-anchor="middle" letter-spacing="0.8"><tspan class="console-text">&gt; Let's get that </tspan><tspan class="p1">p</tspan><tspan class="p2">a</tspan><tspan class="p3">c</tspan><tspan class="p4">k</tspan><tspan class="p5">e</tspan><tspan class="p6">t</tspan><tspan class="console-text"> moving</tspan><tspan class="cursor"> _<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" /></tspan></text>
 
   <!-- DANCING CLOUD ICON -->
-  <g transform="translate(634, 134)">
+  <g transform="translate(618, 116)">
     <g class="dancing-cloud">
       <path d="M11.0947 8.02658C11.5476 5.73111 13.5717 4 16 4C18.7614 4 21 6.23858 21 9C21 11.0345 19.7849 12.7852 18.0408 13.5659M11.0947 8.02658C9.24194 8.21766 7.68947 9.4193 7 11C4.6 11.375 3 13.3144 3 15.4137C3 17.9466 5.14903 20 7.8 20L15 20C17.2091 20 19 18.2719 19 16.1402C19 15.1829 18.6388 14.2698 18.0408 13.5659M11.0947 8.02658C11.265 8.00902 11.4378 8 11.6127 8C14.2747 8 16.4504 9.99072 16.6 12.5C17.1583 12.7354 17.6501 13.106 18.0408 13.5659"
-            fill="none" class="cloud" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="scale(0.83)" />
+            fill="none" class="cloud" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="scale(0.85)" />
     </g>
   </g>
-
-  <!-- BLINKING TERMINAL CURSOR -->
-  <text x="660" y="152" font-family="'Courier New', Courier, monospace" font-size="18" class="cursor" text-anchor="start">
-    _<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
-  </text>
 </svg>

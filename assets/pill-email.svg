@@ -4,9 +4,9 @@
     .icon-stroke { stroke: #0284c7; }
     .label-text { fill: #334155; }
     @media (prefers-color-scheme: dark) {
-      .card-border { stroke: #26354a; }
+      .card-border { stroke: #2f3f55; }
       .icon-stroke { stroke: #7dcfff; }
-      .label-text { fill: #cbd5e1; }
+      .label-text { fill: #d5dce3; }
     }
   </style>
 

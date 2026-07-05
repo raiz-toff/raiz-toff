@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 20" style="background: transparent;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 404 30" style="background: transparent;">
   <style>
     svg {
-      --off: #cbd5e1;
+      --off: #94a3b8;
       --blue: #0284c7;
       --cyan: #0891b2;
       --green: #15803d;
-      --led-dim: #e2e8f0;
+      --led-dim: #cbd5e1;
     }
     @media (prefers-color-scheme: dark) {
       svg {
-        --off: #26354a;
+        --off: #6e7f96;
         --blue: #388bfd;
         --cyan: #00f2fe;
         --green: #3fb950;
-        --led-dim: #1f2937;
+        --led-dim: #33415a;
       }
     }
     @keyframes synActive {
@@ -66,29 +66,29 @@
     .led { animation: blinkLED 6s infinite; }
   </style>
 
-  <g font-family="'Courier New', Courier, monospace" font-size="11" font-weight="bold" fill="var(--off)">
+  <g font-family="'Courier New', Courier, monospace" font-size="16" font-weight="bold" fill="var(--off)">
     <!-- SYN -->
-    <text x="15" y="14" text-anchor="middle" class="syn">SYN</text>
+    <text x="22" y="21" text-anchor="middle" class="syn">SYN</text>
 
     <!-- Arrow 1 -->
-    <text x="45" y="14" text-anchor="middle" class="arrow1">➔</text>
+    <text x="60" y="21" text-anchor="middle" class="arrow1">➔</text>
 
     <!-- SYN-ACK -->
-    <text x="90" y="14" text-anchor="middle" class="syn-ack">SYN-ACK</text>
+    <text x="110" y="21" text-anchor="middle" class="syn-ack">SYN-ACK</text>
 
     <!-- Arrow 2 -->
-    <text x="135" y="14" text-anchor="middle" class="arrow2">➔</text>
+    <text x="168" y="21" text-anchor="middle" class="arrow2">➔</text>
 
     <!-- ACK -->
-    <text x="165" y="14" text-anchor="middle" class="ack">ACK</text>
+    <text x="204" y="21" text-anchor="middle" class="ack">ACK</text>
 
     <!-- Arrow 3 -->
-    <text x="195" y="14" text-anchor="middle" class="arrow3">➔</text>
+    <text x="242" y="21" text-anchor="middle" class="arrow3">➔</text>
 
     <!-- LED Dot -->
-    <circle cx="218" cy="10.5" r="3.2" class="led" />
+    <circle cx="268" cy="15.5" r="4" class="led" />
 
     <!-- ESTABLISHED -->
-    <text x="228" y="14" class="established">ESTABLISHED</text>
+    <text x="282" y="21" class="established">ESTABLISHED</text>
   </g>
 </svg>

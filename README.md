@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/handshake.svg" alt="TCP Handshake Connection" height="20" />
+  <img src="assets/handshake.svg" alt="TCP Handshake Connection" height="30" />
 </p>
 
 <p align="center">
@@ -18,6 +18,10 @@
 
 <p align="center">
   <img src="assets/about.svg" alt="Professional Profile" width="100%" />
+</p>
+
+<p align="center">
+  <img src="assets/mosfet.svg" alt="The success circuit — an N-channel MOSFET: when V_hardwork exceeds V_excuses, I_success flows" width="100%" />
 </p>
 
 ---
@@ -49,14 +53,14 @@
 
 <p align="center">
   <a href="https://rajkumarneupane.com/" target="_blank">
-    <img src="assets/pill-website.svg" alt="Website" height="38" />
+    <img src="assets/pill-website.svg" alt="Website" height="40" />
   </a>
   &nbsp;&nbsp;
   <a href="mailto:cope-sultry-oink@duck.com">
-    <img src="assets/pill-email.svg" alt="Email" height="38" />
+    <img src="assets/pill-email.svg" alt="Email" height="40" />
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/raiz-toff" target="_blank">
-    <img src="assets/pill-github.svg" alt="GitHub" height="38" />
+    <img src="assets/pill-github.svg" alt="GitHub" height="40" />
   </a>
 </p>

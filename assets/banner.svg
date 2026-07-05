@@ -1,30 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" style="background: transparent;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 200" style="background: transparent;">
   <style>
     /* Default Light Mode Styles */
-    .card-border { stroke: #cbd5e1; }
+    .card-border { stroke: #c7d0da; }
     .prompt-text { fill: #64748b; }
     .status-text { fill: #15803d; }
     .name-text { fill: #0f172a; }
     .sub-text { fill: #475569; }
-    .formula-muted { fill: #94a3b8; }
-    .f-hardwork { fill: #d97706; }
-    .f-excuses { fill: #dc2626; }
-    .f-success { fill: #15803d; }
     .cursor { fill: #0284c7; }
     .n1 { fill: #1d4ed8; } .n2 { fill: #2563eb; } .n3 { fill: #0284c7; }
     .n4 { fill: #0ea5e9; } .n5 { fill: #0891b2; } .n6 { fill: #06b6d4; } .n7 { fill: #0e7490; }
 
     /* Dark Mode (Tokyonight Theme) Styles */
     @media (prefers-color-scheme: dark) {
-      .card-border { stroke: #26354a; }
-      .prompt-text { fill: #8b949e; }
+      .card-border { stroke: #2f3f55; }
+      .prompt-text { fill: #98a4b3; }
       .status-text { fill: #3fb950; }
       .name-text { fill: #f8fafc; }
-      .sub-text { fill: #94a3b8; }
-      .formula-muted { fill: #8b949e; }
-      .f-hardwork { fill: #ff9e64; }
-      .f-excuses { fill: #f7768e; }
-      .f-success { fill: #9ece6a; }
+      .sub-text { fill: #a8b3c1; }
       .cursor { fill: #00f2fe; }
       .n1 { fill: #388bfd; } .n2 { fill: #44a5ff; } .n3 { fill: #58a6ff; }
       .n4 { fill: #79b8ff; } .n5 { fill: #7dcfff; } .n6 { fill: #2ac3de; } .n7 { fill: #00f2fe; }
@@ -32,33 +24,28 @@
   </style>
 
   <!-- Card frame -->
-  <rect x="2" y="2" width="1196" height="276" rx="16" fill="none" class="card-border" stroke-width="2" />
+  <rect x="2" y="2" width="826" height="196" rx="14" fill="none" class="card-border" stroke-width="1.5" />
 
   <!-- Status LED + prompt -->
-  <circle cx="34" cy="38" r="4.5" fill="#3fb950">
+  <circle cx="32" cy="34" r="4.5" fill="#3fb950">
     <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite" />
   </circle>
   <g font-family="'Courier New', Courier, monospace">
-    <text x="52" y="43" font-size="15" class="prompt-text" letter-spacing="0.5">raiz@toff:~$ whoami</text>
-    <text x="1166" y="43" font-size="14" text-anchor="end" class="status-text" letter-spacing="1">[ conn: ESTABLISHED ]</text>
+    <text x="48" y="39" font-size="14" class="prompt-text" letter-spacing="0.5">raiz@toff:~$ whoami</text>
+    <text x="798" y="39" font-size="13" text-anchor="end" class="status-text" letter-spacing="1">[ conn: ESTABLISHED ]</text>
   </g>
 
-  <!-- Name -->
-  <text x="600" y="152" text-anchor="middle" textLength="640"
+  <!-- Name (no textLength — natural letterforms, no stretching) -->
+  <text x="415" y="114" text-anchor="middle"
         font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-        font-size="62" font-weight="800" letter-spacing="-1" class="name-text">Rajkumar <tspan class="n1">N</tspan><tspan class="n2">e</tspan><tspan class="n3">u</tspan><tspan class="n4">p</tspan><tspan class="n5">a</tspan><tspan class="n6">n</tspan><tspan class="n7">e</tspan></text>
+        font-size="56" font-weight="800" letter-spacing="-0.5" class="name-text">Rajkumar <tspan class="n1">N</tspan><tspan class="n2">e</tspan><tspan class="n3">u</tspan><tspan class="n4">p</tspan><tspan class="n5">a</tspan><tspan class="n6">n</tspan><tspan class="n7">e</tspan></text>
 
   <!-- Blinking cursor -->
-  <rect x="934" y="106" width="10" height="48" rx="1.5" class="cursor">
+  <rect x="696" y="74" width="9" height="44" rx="1.5" class="cursor">
     <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite" />
   </rect>
 
   <!-- Subtitle -->
-  <text x="600" y="196" text-anchor="middle" font-family="'Courier New', Courier, monospace"
-        font-size="17" letter-spacing="2" class="sub-text">network engineer · infrastructure tinkerer · toronto</text>
-
-  <!-- Formula (the transistor equation, kept from v1) -->
-  <text x="600" y="244" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="18" letter-spacing="0.3">
-    <tspan font-style="italic" class="f-hardwork">V</tspan><tspan font-size="13" dy="3" class="f-hardwork">hardwork</tspan><tspan dy="-3" class="formula-muted"> &gt; </tspan><tspan font-style="italic" class="f-excuses">V</tspan><tspan font-size="13" dy="3" class="f-excuses">excuses</tspan><tspan dy="-3" class="formula-muted">  →  </tspan><tspan font-style="italic" class="f-success">I</tspan><tspan font-size="13" dy="3" class="f-success">success</tspan>
-  </text>
+  <text x="415" y="156" text-anchor="middle" font-family="'Courier New', Courier, monospace"
+        font-size="17" letter-spacing="1.5" class="sub-text">network engineer · infrastructure tinkerer · toronto</text>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 44" style="background: transparent;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 40" style="background: transparent;">
   <style>
     /* Default Light Mode Styles */
     .prompt { fill: #0284c7; }
@@ -10,14 +10,14 @@
     /* Dark Mode (Tokyonight Theme) Styles */
     @media (prefers-color-scheme: dark) {
       .prompt { fill: #00f2fe; }
-      .cmd { fill: #cbd5e1; }
-      .flag { fill: #8b949e; }
-      .comment { fill: #565f89; }
+      .cmd { fill: #d5dce3; }
+      .flag { fill: #98a4b3; }
+      .comment { fill: #768390; }
       .cursor { fill: #00f2fe; }
     }
   </style>
 
-  <g font-family="'Courier New', Courier, monospace" font-size="17" letter-spacing="1">
-    <text x="400" y="28" text-anchor="middle"><tspan class="prompt">~$ </tspan><tspan class="cmd">ls ~/builds</tspan><tspan class="flag"> --sort recent</tspan><tspan class="comment">   # 2 shipped this week</tspan><tspan class="cursor"> _<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" /></tspan></text>
+  <g font-family="'Courier New', Courier, monospace" font-size="18" letter-spacing="0.5">
+    <text x="415" y="27" text-anchor="middle"><tspan class="prompt">~$ </tspan><tspan class="cmd">ls ~/builds</tspan><tspan class="flag"> --sort recent</tspan><tspan class="comment">   # 2 shipped this week</tspan><tspan class="cursor"> _<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" /></tspan></text>
   </g>
 </svg>

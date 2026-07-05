@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 232" style="background: transparent;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 252" style="background: transparent;">
   <style>
     /* Default Light Mode Styles */
-    .card-border { stroke: #cbd5e1; }
+    .card-border { stroke: #c7d0da; }
     .divider { stroke: #e2e8f0; }
     .packet { stroke: #0284c7; }
     .prompt-text { fill: #64748b; }
@@ -18,63 +18,63 @@
 
     /* Dark Mode (Tokyonight Theme) Styles */
     @media (prefers-color-scheme: dark) {
-      .card-border { stroke: #26354a; }
-      .divider { stroke: #1c2940; }
+      .card-border { stroke: #2f3f55; }
+      .divider { stroke: #263450; }
       .packet { stroke: #00f2fe; }
-      .prompt-text { fill: #8b949e; }
+      .prompt-text { fill: #98a4b3; }
       .title-text { fill: #f8fafc; }
-      .loc-text { fill: #8b949e; }
+      .loc-text { fill: #98a4b3; }
       .col-title-net { fill: #7dcfff; }
       .col-title-build { fill: #ff9e64; }
       .col-title-work { fill: #9ece6a; }
       .dot-net { fill: #7dcfff; }
       .dot-build { fill: #ff9e64; }
       .dot-work { fill: #9ece6a; }
-      .body-text { fill: #cbd5e1; }
+      .body-text { fill: #ccd5de; }
       .quote-text { fill: #73daca; }
     }
   </style>
 
   <!-- Card frame -->
-  <rect x="1.5" y="1.5" width="797" height="229" rx="12" fill="none" class="card-border" stroke-width="1.5" />
+  <rect x="2" y="2" width="826" height="248" rx="12" fill="none" class="card-border" stroke-width="1.5" />
 
   <!-- Header -->
   <g font-family="'Courier New', Courier, monospace">
-    <text x="26" y="34" font-size="14" letter-spacing="0.5" class="prompt-text">~$ cat about.md</text>
-    <text x="774" y="34" font-size="13" text-anchor="end" letter-spacing="1" class="loc-text">[ toronto, ca ]</text>
+    <text x="28" y="36" font-size="15" letter-spacing="0.5" class="prompt-text">~$ cat about.md</text>
+    <text x="802" y="36" font-size="14" text-anchor="end" letter-spacing="1" class="loc-text">[ toronto, ca ]</text>
   </g>
 
-  <text x="26" y="64" font-size="17" letter-spacing="0.1" class="title-text"
+  <text x="28" y="72" font-size="20" letter-spacing="0.1" class="title-text"
         font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">Networking Professional &amp; Infrastructure Tinkerer</text>
 
   <!-- Columns -->
   <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.1">
     <!-- Column 1: Networking -->
-    <circle cx="31" cy="94" r="3.5" class="dot-net" />
-    <text x="42" y="99" font-size="14" class="col-title-net" font-family="'Courier New', Courier, monospace" font-weight="700">networking</text>
-    <text x="26" y="124" font-size="12.5" class="body-text">Cisco Catalyst, MikroTik, CML,</text>
-    <text x="26" y="142" font-size="12.5" class="body-text">and building robust homelabs.</text>
+    <circle cx="33" cy="102" r="4" class="dot-net" />
+    <text x="46" y="107" font-size="15" class="col-title-net" font-family="'Courier New', Courier, monospace" font-weight="700">networking</text>
+    <text x="28" y="134" font-size="14.5" class="body-text">Cisco Catalyst, MikroTik, CML,</text>
+    <text x="28" y="155" font-size="14.5" class="body-text">and building robust homelabs.</text>
 
     <!-- Column 2: Building -->
-    <circle cx="301" cy="94" r="3.5" class="dot-build" />
-    <text x="312" y="99" font-size="14" class="col-title-build" font-family="'Courier New', Courier, monospace" font-weight="700">building</text>
-    <text x="296" y="124" font-size="12.5" class="body-text">Crafting local-first tools with</text>
-    <text x="296" y="142" font-size="12.5" class="body-text">Python, TypeScript &amp; React Native.</text>
+    <circle cx="307" cy="102" r="4" class="dot-build" />
+    <text x="320" y="107" font-size="15" class="col-title-build" font-family="'Courier New', Courier, monospace" font-weight="700">building</text>
+    <text x="302" y="134" font-size="14.5" class="body-text">Crafting local-first tools with</text>
+    <text x="302" y="155" font-size="14.5" class="body-text">Python, TypeScript &amp; React Native.</text>
 
     <!-- Column 3: Workflow -->
-    <circle cx="571" cy="94" r="3.5" class="dot-work" />
-    <text x="582" y="99" font-size="14" class="col-title-work" font-family="'Courier New', Courier, monospace" font-weight="700">workflow</text>
-    <text x="566" y="124" font-size="12.5" class="body-text">Documentation, automation,</text>
-    <text x="566" y="142" font-size="12.5" class="body-text">and continuous learning.</text>
+    <circle cx="581" cy="102" r="4" class="dot-work" />
+    <text x="594" y="107" font-size="15" class="col-title-work" font-family="'Courier New', Courier, monospace" font-weight="700">workflow</text>
+    <text x="576" y="134" font-size="14.5" class="body-text">Documentation, automation,</text>
+    <text x="576" y="155" font-size="14.5" class="body-text">and continuous learning.</text>
   </g>
 
   <!-- Divider with traveling packet -->
-  <line x1="26" y1="172" x2="774" y2="172" class="divider" stroke-width="1.5" />
-  <line x1="26" y1="172" x2="774" y2="172" class="packet" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="16 732">
-    <animate attributeName="stroke-dashoffset" from="748" to="0" dur="6s" repeatCount="indefinite" />
+  <line x1="28" y1="186" x2="802" y2="186" class="divider" stroke-width="1.5" />
+  <line x1="28" y1="186" x2="802" y2="186" class="packet" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="16 758">
+    <animate attributeName="stroke-dashoffset" from="774" to="0" dur="6s" repeatCount="indefinite" />
   </line>
 
   <!-- Footer Quote -->
-  <text x="400" y="206" text-anchor="middle" font-size="13.5" class="quote-text"
+  <text x="415" y="222" text-anchor="middle" font-size="15" class="quote-text"
         font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">“Documentation is my favorite part of the stack.”</text>
 </svg>
