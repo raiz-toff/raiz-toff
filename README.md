@@ -7,20 +7,6 @@
 </p>
 
 <p align="center">
-  <img src="assets/network.svg" alt="Data Flow Network" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=raiz-toff&label=PROFILE+VIEWS&color=2563eb&style=flat-square" />
-</p>
-
----
-
-<p align="center">
-  <img src="assets/about.svg" alt="Professional Profile" width="100%" />
-</p>
-
-<p align="center">
   <img src="assets/mosfet.svg" alt="The success circuit — an N-channel MOSFET: when V_hardwork exceeds V_excuses, I_success flows" width="100%" />
 </p>
 
