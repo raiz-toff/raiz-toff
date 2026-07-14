@@ -1,0 +1,115 @@
+# .github/workflows/lab.yml — the living lab repainter.
+#
+# Every surface that can change the world funnels through this single job:
+#   schedule            — hourly heartbeat: refresh env, un-park expired penguins
+#   workflow_dispatch   — manual repaint
+#   watch               — somebody starred the repo -> they appear as a visitor
+#   issues              — "penguin: goto X,Y" / "penguin: north" commands
+#   repository_dispatch — penguin-move (from the site) and lab-sync
+#
+# Security invariant: user-controlled values (issue titles, dispatch payloads)
+# NEVER appear inline inside run: scripts. They travel exclusively via the
+# event payload file ($GITHUB_EVENT_PATH -> event.json) and env: blocks.
+
+name: living lab
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  watch:
+    types: [started]
+  issues:
+    types: [opened]
+  repository_dispatch:
+    types: [penguin-move, lab-sync]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: lab
+  cancel-in-progress: false
+
+jobs:
+  repaint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      # For issues events, everything downstream is skipped unless the title
+      # starts with "penguin:". The startsWith() expression is evaluated by
+      # Actions (case-insensitively) and only its boolean result reaches the
+      # shell — the raw title never does.
+      - name: guard — only penguin issues proceed
+        id: guard
+        env:
+          TITLE_OK: ${{ startsWith(github.event.issue.title, 'penguin:') }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "issues" ] && [ "$TITLE_OK" != "true" ]; then
+            echo "issue title does not start with 'penguin:' — nothing to do here"
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: dump event payload
+        if: steps.guard.outputs.run == 'true'
+        run: cp "$GITHUB_EVENT_PATH" event.json
+
+      # apply-event.mjs mutates lab/world.json and prints a result JSON to
+      # stdout ({"comment": "...", "close": true, "ok": ...}). It does no
+      # network I/O and exits 0 even for invalid moves.
+      - name: apply event to world state
+        if: steps.guard.outputs.run == 'true'
+        run: node lab/apply-event.mjs "$GITHUB_EVENT_NAME" event.json | tee apply-result.json
+
+      # The workflow — not the applier — talks to the GitHub API. The comment
+      # body is read from the applier's result file and passed to gh as a
+      # plain argument, never eval'd.
+      - name: comment on and close the issue
+        if: steps.guard.outputs.run == 'true' && github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          COMMENT="$(jq -r '.comment // empty' apply-result.json)"
+          CLOSE="$(jq -r '.close // false' apply-result.json)"
+          if [ -n "$COMMENT" ]; then
+            gh api "repos/$GITHUB_REPOSITORY/issues/$ISSUE_NUMBER/comments" -f body="$COMMENT"
+          fi
+          if [ "$CLOSE" = "true" ]; then
+            gh api --method PATCH "repos/$GITHUB_REPOSITORY/issues/$ISSUE_NUMBER" -f state=closed
+          fi
+
+      # Writes lab/env.json. Falls back gracefully (and still exits 0) if any
+      # upstream API is unreachable.
+      - name: fetch environment (time · github · weather)
+        if: steps.guard.outputs.run == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node lab/fetch-env.mjs
+
+      - name: repaint the story loop
+        if: steps.guard.outputs.run == 'true'
+        run: node lab/generate.mjs
+
+      - name: commit and push if anything changed
+        if: steps.guard.outputs.run == 'true'
+        run: |
+          for f in assets/story/story-loop.svg lab/world.json lab/env.json; do
+            if [ -e "$f" ]; then
+              git add -- "$f"
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo "no changes — skipping commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "lab: repaint ($GITHUB_EVENT_NAME)"
+          git pull --rebase origin main
+          git push

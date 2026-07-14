@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "penguin": {
+    "x": 10,
+    "y": 8,
+    "mode": "patrol",
+    "parkedUntil": null,
+    "setBy": null
+  },
+  "visitors": [],
+  "updatedAt": "2026-07-14T00:00:00.000Z"
+}

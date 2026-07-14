@@ -1,0 +1,320 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 396" role="img" aria-label="Two patch panels joined by a dark fiber with a service loop: a T568A panel upper-left with cables exiting up and left, a T568B panel lower-right with cables exiting down and right, and a 1U switch uplinked into the lower panel">
+  <style>
+    :root { color-scheme: light dark; }
+    svg {
+      --background: #ffffff; --foreground: #1f2328;
+      --border: #d1d9e0; --line: #d8dee4; --ring: #6e7781;
+      --muted: #f6f8fa; --muted-foreground: #59636e;
+      --hw-stroke: #6e7781; --hw-stroke-soft: #d1d9e0; --hw-stroke-strong: #454c54;
+      --hw-face-1: #e7ebf0; --hw-face-2: #f0f3f6; --hw-face-3: #f8fafc;
+      --hw-well: #dbe2e9; --hw-label: #57606a; --hw-label-dim: #8b949e;
+      --hw-cable: #59636e;
+      --led-green: #1f883d; --led-amber: #bf8700; --led-teal: #1b7c83;
+    }
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --background: #0d1117; --foreground: #e6edf3;
+        --border: #30363d; --line: #21262d; --ring: #8b949e;
+        --muted: #161b22; --muted-foreground: #8b949e;
+        --hw-stroke: #8b949e; --hw-stroke-soft: #30363d; --hw-stroke-strong: #c9d1d9;
+        --hw-face-1: #161b22; --hw-face-2: #1c2128; --hw-face-3: #21262d;
+        --hw-well: #0d1117; --hw-label: #9ea7b3; --hw-label-dim: #6e7781;
+        --hw-cable: #768390;
+        --led-green: #3fb950; --led-amber: #d29922; --led-teal: #39c5cf;
+      }
+    }
+    text { font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace; }
+  </style>
+
+  <!-- background: dashed rail stubs grounding each panel in an implied rack,
+       plus dashed continuations running off-canvas. Panel A's right rail is
+       omitted: the dark fiber exits through that spot. -->
+  <g fill="none">
+    <line x1="32" y1="96" x2="32" y2="172" stroke="var(--hw-stroke-soft)" stroke-dasharray="3 3"/>
+    <line x1="332" y1="216" x2="332" y2="292" stroke="var(--hw-stroke-soft)" stroke-dasharray="3 3"/>
+    <line x1="608" y1="216" x2="608" y2="292" stroke="var(--hw-stroke-soft)" stroke-dasharray="3 3"/>
+    <path d="M 32 134 H -8" stroke="var(--border)" stroke-dasharray="4 4"/>
+    <path d="M 608 254 H 648" stroke="var(--border)" stroke-dasharray="4 4"/>
+    <path d="M 624 64 H 648" stroke="var(--border)" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- band A: 8 cables exiting up from panel A, sweeping left off-canvas -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0.3s" fill="freeze"/>
+    <rect x="101.5" y="104" width="8" height="17" rx="1.5" fill="#9a6b3f"/>
+    <path d="M 105.5 108 V 89 A 26 26 0 0 0 79.5 63 H -4" fill="none" stroke="#9a6b3f" stroke-width="4"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0.4s" fill="freeze"/>
+    <rect x="120.5" y="104" width="8" height="17" rx="1.5" fill="#9a6b3f"/>
+    <path d="M 124.5 108 V 82 A 26 26 0 0 0 98.5 56 H -4" fill="none" stroke="#9a6b3f" stroke-width="4"/>
+    <path d="M 124.5 108 V 82 A 26 26 0 0 0 98.5 56 H -4" fill="none" stroke="#e8e8e8" stroke-width="4" stroke-dasharray="4 9"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0.5s" fill="freeze"/>
+    <rect x="139.5" y="104" width="8" height="17" rx="1.5" fill="#f97316"/>
+    <path d="M 143.5 108 V 75 A 26 26 0 0 0 117.5 49 H -4" fill="none" stroke="#f97316" stroke-width="4"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0.6s" fill="freeze"/>
+    <rect x="158.5" y="104" width="8" height="17" rx="1.5" fill="#3b82f6"/>
+    <path d="M 162.5 108 V 68 A 26 26 0 0 0 136.5 42 H -4" fill="none" stroke="#3b82f6" stroke-width="4"/>
+    <path d="M 162.5 108 V 68 A 26 26 0 0 0 136.5 42 H -4" fill="none" stroke="#e8e8e8" stroke-width="4" stroke-dasharray="4 9"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0.7s" fill="freeze"/>
+    <rect x="182.5" y="104" width="8" height="17" rx="1.5" fill="#3b82f6"/>
+    <path d="M 186.5 108 V 61 A 26 26 0 0 0 160.5 35 H -4" fill="none" stroke="#3b82f6" stroke-width="4"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0.8s" fill="freeze"/>
+    <rect x="201.5" y="104" width="8" height="17" rx="1.5" fill="#f97316"/>
+    <path d="M 205.5 108 V 54 A 26 26 0 0 0 179.5 28 H -4" fill="none" stroke="#f97316" stroke-width="4"/>
+    <path d="M 205.5 108 V 54 A 26 26 0 0 0 179.5 28 H -4" fill="none" stroke="#e8e8e8" stroke-width="4" stroke-dasharray="4 9"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0.9s" fill="freeze"/>
+    <rect x="220.5" y="104" width="8" height="17" rx="1.5" fill="#22c55e"/>
+    <path d="M 224.5 108 V 47 A 26 26 0 0 0 198.5 21 H -4" fill="none" stroke="#22c55e" stroke-width="4"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="1.0s" fill="freeze"/>
+    <rect x="239.5" y="104" width="8" height="17" rx="1.5" fill="#22c55e"/>
+    <path d="M 243.5 108 V 40 A 26 26 0 0 0 217.5 14 H -4" fill="none" stroke="#22c55e" stroke-width="4"/>
+    <path d="M 243.5 108 V 40 A 26 26 0 0 0 217.5 14 H -4" fill="none" stroke="#e8e8e8" stroke-width="4" stroke-dasharray="4 9"/>
+  </g>
+
+  <!-- panel A - 568A -->
+  <rect x="40" y="112" width="260" height="44" rx="4" fill="var(--hw-face-3)" stroke="var(--hw-stroke)"/>
+  <circle cx="48" cy="122" r="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <circle cx="48" cy="146" r="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <circle cx="293" cy="122" r="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <circle cx="293" cy="146" r="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <text x="42" y="176" font-size="11" fill="var(--hw-label)" letter-spacing="1.5">T568A</text>
+  <g>
+    <rect x="60" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="64.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="79" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="83.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="98" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="102.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="117" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="121.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="136" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="140.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="155" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="159.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="179" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="183.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="198" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="202.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="217" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="221.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="236" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="240.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="255" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="259.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="274" y="122" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="278.5" y="123" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+
+  <!-- switch - SW-01 -->
+  <rect x="420" y="48" width="196" height="32" rx="4" fill="var(--hw-face-3)" stroke="var(--hw-stroke)"/>
+  <circle cx="428" cy="56" r="2" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <circle cx="428" cy="72" r="2" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <circle cx="608" cy="56" r="2" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <circle cx="608" cy="72" r="2" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <text x="438" y="69" font-size="11" fill="var(--hw-label)" letter-spacing="1">SW-01</text>
+  <g>
+    <rect x="482" y="60" width="11" height="9" rx="1.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <circle cx="487.5" cy="55" r="1.7" fill="var(--led-green)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.6s" fill="freeze"/>
+    </circle>
+  </g>
+  <g>
+    <rect x="497" y="60" width="11" height="9" rx="1.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <circle cx="502.5" cy="55" r="1.7" fill="var(--led-green)" opacity="0"/>
+  </g>
+  <g>
+    <rect x="512" y="60" width="11" height="9" rx="1.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <circle cx="517.5" cy="55" r="1.7" fill="var(--led-green)" opacity="0">
+      <animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="0.9s" begin="3.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g>
+    <rect x="527" y="60" width="11" height="9" rx="1.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <circle cx="532.5" cy="55" r="1.7" fill="var(--led-green)" opacity="0"/>
+  </g>
+  <g>
+    <rect x="542" y="60" width="11" height="9" rx="1.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <circle cx="547.5" cy="55" r="1.7" fill="var(--led-green)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.6s" fill="freeze"/>
+    </circle>
+  </g>
+  <g>
+    <rect x="557" y="60" width="11" height="9" rx="1.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <circle cx="562.5" cy="55" r="1.7" fill="var(--led-green)" opacity="0">
+      <animate attributeName="opacity" values="1;1;0.15;1;0.15;1" dur="1.3s" begin="3.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g>
+    <rect x="572" y="60" width="11" height="9" rx="1.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <circle cx="577.5" cy="55" r="1.7" fill="var(--led-green)" opacity="0"/>
+  </g>
+  <g>
+    <rect x="587" y="60" width="11" height="9" rx="1.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <circle cx="592.5" cy="55" r="1.7" fill="var(--led-green)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.6s" fill="freeze"/>
+    </circle>
+  </g>
+
+  <!-- uplink: switch port 7 down into panel B -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.4s" fill="freeze"/>
+    <rect x="556" y="78" width="8" height="13" rx="1.5" fill="var(--hw-stroke-strong)"/>
+    <line x1="560" y1="90" x2="560" y2="226" stroke="var(--hw-cable)" stroke-width="3"/>
+    <rect x="556" y="222" width="8" height="12" rx="1.5" fill="var(--hw-stroke-strong)"/>
+  </g>
+
+  <!-- dark fiber, panel A to panel B, with a service loop -->
+  <rect x="296" y="129" width="12" height="9" rx="1.5" fill="var(--hw-label)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="1.3s" fill="freeze"/>
+  </rect>
+  <path d="M 308 134 C 330 134, 346 142, 352 156 C 357 168, 355 186, 362 202 C 369 218, 358 238, 346 250" fill="none" stroke="var(--hw-cable)" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1">
+    <animate attributeName="stroke-dashoffset" from="1" to="0" dur="0.9s" begin="1.3s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+  </path>
+  <circle cx="374" cy="180" r="15" fill="none" stroke="var(--hw-cable)" stroke-width="3" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.2s" fill="freeze"/>
+  </circle>
+  <circle cx="374" cy="180" r="10" fill="none" stroke="var(--hw-cable)" stroke-width="3" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.2s" fill="freeze"/>
+  </circle>
+  <rect x="340" y="248" width="9" height="12" rx="1.5" fill="var(--hw-label)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.2s" fill="freeze"/>
+  </rect>
+  <text x="404" y="184" font-size="11" fill="var(--hw-label-dim)" font-style="italic" opacity="0">dark fiber<animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.2s" fill="freeze"/></text>
+
+  <!-- panel B - 568B -->
+  <rect x="340" y="232" width="260" height="44" rx="4" fill="var(--hw-face-3)" stroke="var(--hw-stroke)"/>
+  <circle cx="348" cy="242" r="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <circle cx="348" cy="266" r="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <circle cx="593" cy="242" r="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <circle cx="593" cy="266" r="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke-strong)"/>
+  <text x="598" y="296" font-size="11" fill="var(--hw-label)" letter-spacing="1.5" text-anchor="end">T568B</text>
+  <g>
+    <rect x="356" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="360.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="375" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="379.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="394" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="398.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="413" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="417.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="432" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="436.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="451" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="455.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="475" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="479.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="494" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="498.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="513" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="517.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="532" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="536.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="551" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="555.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+  <g>
+    <rect x="570" y="242" width="15" height="22" rx="2.5" fill="var(--hw-well)" stroke="var(--hw-stroke)"/>
+    <rect x="574.5" y="260" width="6" height="3" fill="var(--hw-stroke-strong)"/>
+  </g>
+
+  <!-- band B: 8 cables exiting down from panel B, sweeping right off-canvas -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.7s" fill="freeze"/>
+    <rect x="397.5" y="258" width="8" height="17" rx="1.5" fill="#9a6b3f"/>
+    <path d="M 401.5 274 V 359 A 26 26 0 0 0 427.5 385 H 644" fill="none" stroke="#9a6b3f" stroke-width="4"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.8s" fill="freeze"/>
+    <rect x="416.5" y="258" width="8" height="17" rx="1.5" fill="#9a6b3f"/>
+    <path d="M 420.5 274 V 352 A 26 26 0 0 0 446.5 378 H 644" fill="none" stroke="#9a6b3f" stroke-width="4"/>
+    <path d="M 420.5 274 V 352 A 26 26 0 0 0 446.5 378 H 644" fill="none" stroke="#e8e8e8" stroke-width="4" stroke-dasharray="4 9"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.9s" fill="freeze"/>
+    <rect x="435.5" y="258" width="8" height="17" rx="1.5" fill="#22c55e"/>
+    <path d="M 439.5 274 V 345 A 26 26 0 0 0 465.5 371 H 644" fill="none" stroke="#22c55e" stroke-width="4"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.0s" fill="freeze"/>
+    <rect x="454.5" y="258" width="8" height="17" rx="1.5" fill="#3b82f6"/>
+    <path d="M 458.5 274 V 338 A 26 26 0 0 0 484.5 364 H 644" fill="none" stroke="#3b82f6" stroke-width="4"/>
+    <path d="M 458.5 274 V 338 A 26 26 0 0 0 484.5 364 H 644" fill="none" stroke="#e8e8e8" stroke-width="4" stroke-dasharray="4 9"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.1s" fill="freeze"/>
+    <rect x="478.5" y="258" width="8" height="17" rx="1.5" fill="#3b82f6"/>
+    <path d="M 482.5 274 V 331 A 26 26 0 0 0 508.5 357 H 644" fill="none" stroke="#3b82f6" stroke-width="4"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.2s" fill="freeze"/>
+    <rect x="497.5" y="258" width="8" height="17" rx="1.5" fill="#22c55e"/>
+    <path d="M 501.5 274 V 324 A 26 26 0 0 0 527.5 350 H 644" fill="none" stroke="#22c55e" stroke-width="4"/>
+    <path d="M 501.5 274 V 324 A 26 26 0 0 0 527.5 350 H 644" fill="none" stroke="#e8e8e8" stroke-width="4" stroke-dasharray="4 9"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.3s" fill="freeze"/>
+    <rect x="516.5" y="258" width="8" height="17" rx="1.5" fill="#f97316"/>
+    <path d="M 520.5 274 V 317 A 26 26 0 0 0 546.5 343 H 644" fill="none" stroke="#f97316" stroke-width="4"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.4s" fill="freeze"/>
+    <rect x="535.5" y="258" width="8" height="17" rx="1.5" fill="#f97316"/>
+    <path d="M 539.5 274 V 310 A 26 26 0 0 0 565.5 336 H 644" fill="none" stroke="#f97316" stroke-width="4"/>
+    <path d="M 539.5 274 V 310 A 26 26 0 0 0 565.5 336 H 644" fill="none" stroke="#e8e8e8" stroke-width="4" stroke-dasharray="4 9"/>
+  </g>
+</svg>

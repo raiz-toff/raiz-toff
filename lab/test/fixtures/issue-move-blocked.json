@@ -1,0 +1,26 @@
+{
+  "action": "opened",
+  "issue": {
+    "id": 1002,
+    "number": 43,
+    "title": "penguin: goto 6,3",
+    "state": "open",
+    "body": "",
+    "user": {
+      "login": "octocat",
+      "id": 583231,
+      "type": "User"
+    }
+  },
+  "repository": {
+    "id": 1,
+    "name": "raiz-toff",
+    "full_name": "raiz-toff/raiz-toff",
+    "private": false
+  },
+  "sender": {
+    "login": "octocat",
+    "id": 583231,
+    "type": "User"
+  }
+}

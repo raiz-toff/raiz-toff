@@ -1,0 +1,16 @@
+{
+  "action": "lab-sync",
+  "branch": "main",
+  "client_payload": {},
+  "repository": {
+    "id": 1,
+    "name": "raiz-toff",
+    "full_name": "raiz-toff/raiz-toff",
+    "private": false
+  },
+  "sender": {
+    "login": "raiz-toff",
+    "id": 9999999,
+    "type": "User"
+  }
+}

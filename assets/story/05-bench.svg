@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" role="img" aria-label="Isometric illustration of a home lab: a hypervisor slab carrying virtual machine blocks, connected by circuit traces">
+  <style>
+    :root { color-scheme: light dark; }
+    svg {
+      --background: #ffffff; --foreground: #1f2328;
+      --border: #d1d9e0; --line: #d8dee4; --ring: #6e7781;
+      --muted: #f6f8fa; --muted-foreground: #59636e;
+      --hw-stroke: #6e7781; --hw-stroke-soft: #d1d9e0; --hw-stroke-strong: #454c54;
+      --hw-face-1: #e7ebf0; --hw-face-2: #f0f3f6; --hw-face-3: #f8fafc;
+      --hw-well: #dbe2e9; --hw-label: #57606a; --hw-label-dim: #8b949e;
+      --hw-cable: #59636e;
+      --led-green: #1f883d; --led-amber: #bf8700; --led-teal: #1b7c83;
+    }
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --background: #0d1117; --foreground: #e6edf3;
+        --border: #30363d; --line: #21262d; --ring: #8b949e;
+        --muted: #161b22; --muted-foreground: #8b949e;
+        --hw-stroke: #8b949e; --hw-stroke-soft: #30363d; --hw-stroke-strong: #c9d1d9;
+        --hw-face-1: #161b22; --hw-face-2: #1c2128; --hw-face-3: #21262d;
+        --hw-well: #0d1117; --hw-label: #9ea7b3; --hw-label-dim: #6e7781;
+        --hw-cable: #768390;
+        --led-green: #3fb950; --led-amber: #d29922; --led-teal: #39c5cf;
+      }
+    }
+    text { font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace; }
+  </style>
+  <defs>
+    <pattern id="iso-hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="var(--line)" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <g transform="translate(450 175)">
+    <g fill="none" stroke="var(--border)">
+      <path d="M 112.6 85.0 L 259.8 170.0 L 155.9 230.0 L 363.7 350.0" stroke-dasharray="4 4"/>
+      <path d="M -77.9 85.0 L -225.2 170.0 L -381.0 80.0 L -519.6 160.0" stroke-dasharray="4 4"/>
+      <path d="M 190.5 0.0 L 372.4 -105.0" stroke-dasharray="4 4"/>
+      <path d="M -164.5 -35.0 L -363.7 -150.0 L -242.5 -220.0" stroke-dasharray="4 4"/>
+    </g>
+    <circle r="2.5" opacity="0" fill="var(--led-green)">
+      <animateMotion dur="5s" begin="0.4s" repeatCount="indefinite" path="M 112.6 85.0 L 259.8 170.0 L 155.9 230.0 L 363.7 350.0"/>
+      <set attributeName="opacity" to="1" begin="0.4s"/>
+    </circle>
+    <circle r="2.5" opacity="0" fill="var(--led-teal)">
+      <animateMotion dur="6.5s" begin="2s" repeatCount="indefinite" path="M -77.9 85.0 L -225.2 170.0 L -381.0 80.0 L -519.6 160.0"/>
+      <set attributeName="opacity" to="1" begin="2s"/>
+    </circle>
+    <g fill="none" stroke="var(--border)" stroke-dasharray="3 3">
+      <polygon points="-112.6,-299.0 -34.6,-254.0 -112.6,-209.0 -190.5,-254.0"/>
+      <polygon points="-34.6,-254.0 -112.6,-209.0 -112.6,-165.0 -34.6,-210.0"/>
+      <polygon points="-190.5,-254.0 -112.6,-209.0 -112.6,-165.0 -190.5,-210.0"/>
+    </g>
+    <g fill="none" stroke="var(--border)" stroke-dasharray="3 3">
+      <polygon points="363.7,-130.0 424.3,-95.0 363.7,-60.0 303.1,-95.0"/>
+      <polygon points="424.3,-95.0 363.7,-60.0 363.7,50.0 424.3,15.0"/>
+      <polygon points="303.1,-95.0 363.7,-60.0 363.7,50.0 303.1,15.0"/>
+    </g>
+    <g stroke="var(--ring)" stroke-width="1" stroke-linejoin="round">
+      <polygon points="-225.2,-16.0 17.3,124.0 17.3,140.0 -225.2,0.0" fill="var(--muted)"/>
+      <polygon points="225.2,4.0 17.3,124.0 17.3,140.0 225.2,20.0" fill="var(--background)"/>
+      <polygon points="-17.3,-136.0 225.2,4.0 17.3,124.0 -225.2,-16.0" fill="var(--background)"/>
+      <polygon points="-17.3,-136.0 225.2,4.0 17.3,124.0 -225.2,-16.0" fill="url(#iso-hatch)" stroke="none"/>
+    </g>
+    <g stroke="var(--ring)" stroke-width="1" stroke-linejoin="round">
+      <polygon points="-86.6,-118.0 -17.3,-78.0 -17.3,-26.0 -86.6,-66.0" fill="var(--muted)"/>
+      <polygon points="52.0,-118.0 -17.3,-78.0 -17.3,-26.0 52.0,-66.0" fill="var(--background)"/>
+      <polygon points="-17.3,-158.0 52.0,-118.0 -17.3,-78.0 -86.6,-118.0" fill="var(--background)"/>
+    </g>
+    <g stroke="var(--ring)" stroke-width="1" stroke-linejoin="round">
+      <polygon points="31.2,-108.0 86.6,-76.0 86.6,8.0 31.2,-24.0" fill="var(--muted)"/>
+      <polygon points="142.0,-108.0 86.6,-76.0 86.6,8.0 142.0,-24.0" fill="var(--background)"/>
+      <polygon points="86.6,-140.0 142.0,-108.0 86.6,-76.0 31.2,-108.0" fill="var(--background)"/>
+    </g>
+    <g stroke="var(--ring)" stroke-width="1" stroke-linejoin="round">
+      <polygon points="-147.2,-31.0 -52.0,24.0 -52.0,54.0 -147.2,-1.0" fill="var(--muted)"/>
+      <polygon points="8.7,-11.0 -52.0,24.0 -52.0,54.0 8.7,19.0" fill="var(--background)"/>
+      <polygon points="-86.6,-66.0 8.7,-11.0 -52.0,24.0 -147.2,-31.0" fill="var(--background)"/>
+      <polygon points="-86.6,-66.0 8.7,-11.0 -52.0,24.0 -147.2,-31.0" fill="url(#iso-hatch)" stroke="none"/>
+    </g>
+    <g stroke="var(--ring)" stroke-width="1" stroke-linejoin="round">
+      <polygon points="1.7,5.0 45.0,30.0 45.0,70.0 1.7,45.0" fill="var(--muted)"/>
+      <polygon points="88.3,5.0 45.0,30.0 45.0,70.0 88.3,45.0" fill="var(--background)"/>
+      <polygon points="45.0,-20.0 88.3,5.0 45.0,30.0 1.7,5.0" fill="var(--background)"/>
+    </g>
+    <g font-size="9" fill="var(--muted-foreground)">
+    <text x="-239.8" y="19.0">pve-01 // type-1</text>
+    <text x="152.0" y="-114.0">eve-ng</text>
+    <text x="-69.3" y="-168.0">cml</text>
+    <text x="-213.2" y="-27.0">gitlab</text>
+    </g>
+  </g>
+</svg>

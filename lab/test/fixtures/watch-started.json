@@ -1,0 +1,16 @@
+{
+  "action": "started",
+  "starred_at": "2026-07-14T12:00:00Z",
+  "repository": {
+    "id": 1,
+    "name": "raiz-toff",
+    "full_name": "raiz-toff/raiz-toff",
+    "private": false
+  },
+  "sender": {
+    "login": "octocat",
+    "id": 583231,
+    "type": "User",
+    "site_admin": false
+  }
+}
