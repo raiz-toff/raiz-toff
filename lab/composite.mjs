@@ -3,7 +3,7 @@
 //   export function compose(scenes, ctx) → full SVG string
 //
 // Ported from the surviving story-loop generator: same stage (640x400, scene
-// area 640x370 centered-fit), same film timing (6 slots x 8s, 48s cycle,
+// area 640x370 centered-fit), same film timing (n slots x 8s per slot,
 // 0.7s crossfade, slot 0 visible at t=0), same begin-shifting rule (one-shot
 // fill="freeze"/<set> numeric begins in slot k move by +8k s; looping
 // repeatCount="indefinite" ambience is left untouched), same caption strip

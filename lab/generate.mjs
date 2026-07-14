@@ -16,13 +16,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { compose } from "./composite.mjs";
 import * as floor from "./scenes/floor.mjs";
-import * as coldAisle from "./scenes/cold-aisle.mjs";
-import * as rack from "./scenes/rack.mjs";
 import * as layer1 from "./scenes/layer1.mjs";
-import * as farEnd from "./scenes/far-end.mjs";
 import * as bench from "./scenes/bench.mjs";
 
-const SCENES = [floor, coldAisle, rack, layer1, farEnd, bench];
+const SCENES = [floor, layer1, bench];
 
 const ROOT = process.cwd();
 const WORLD_FILE = path.join(ROOT, "lab", "world.json");
