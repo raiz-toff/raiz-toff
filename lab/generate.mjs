@@ -15,6 +15,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { compose } from "./composite.mjs";
+import { moodFromCode, tempMoodFromC, conditionLabel } from "./weather.mjs";
 import * as floor from "./scenes/floor.mjs";
 import * as layer1 from "./scenes/layer1.mjs";
 import * as bench from "./scenes/bench.mjs";
@@ -55,6 +56,14 @@ function buildCtx(world, env) {
   const tempC = Number.isFinite(Number(e.tempC)) && e.tempC !== null ? Number(e.tempC) : null;
   const hourToronto = clamp(e.hourToronto, 0, 23, 12);
 
+  const weatherCode = Number.isInteger(e.weatherCode) ? e.weatherCode : null;
+  const weather = {
+    code: weatherCode,
+    mood: moodFromCode(weatherCode),
+    tempMood: tempMoodFromC(tempC),
+    label: conditionLabel(weatherCode),
+  };
+
   const p = w.penguin && typeof w.penguin === "object" ? w.penguin : {};
   const storedMode = p.mode === "parked" ? "parked" : "patrol";
   const penguin = {
@@ -74,6 +83,7 @@ function buildCtx(world, env) {
     cracDuty,
     tempC,
     hourToronto,
+    weather,
     penguin,
     visitors,
     latestVisitor,
@@ -129,6 +139,7 @@ function main() {
       night: ctx.night,
       load: ctx.load,
       tempC: ctx.tempC,
+      weather: ctx.weather,
       penguin: ctx.penguin,
       visitorCount: ctx.visitorCount,
       latestVisitor: ctx.latestVisitor,

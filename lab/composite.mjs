@@ -13,6 +13,8 @@
 // → { body, defs } with every id prefixed KEY + "_". compose() validates
 // all of that and throws on any violation — nothing is written on error.
 
+import { renderPanel, renderOverlay } from "./weather.mjs";
+
 const STAGE_W = 640;
 const STAGE_H = 400;
 const SCENE_H = 370;
@@ -70,7 +72,10 @@ function loadBar(load) {
 }
 
 function statusLine(ctx) {
-  const parts = [ctx.night ? "night shift" : "day shift", "load " + loadBar(Number(ctx.load))];
+  const parts = [];
+  const w = ctx.weather;
+  if (w && w.label) parts.push(w.label);
+  parts.push(ctx.night ? "night shift" : "day shift", "load " + loadBar(Number(ctx.load)));
   const t = Number(ctx.tempC);
   if (ctx.tempC !== null && ctx.tempC !== undefined && Number.isFinite(t)) {
     parts.push(Math.round(t) + "°c toronto");
@@ -243,12 +248,12 @@ export function compose(scenes, ctx) {
     }
   });
 
-  // status line: always visible, right-aligned above the dots
-  const status = statusLine(ctx);
-  const statusText =
-    '<text x="630" y="379" text-anchor="end" font-size="9.5" fill="var(--hw-label-dim)">' +
-    esc(status) + "</text>";
+  // big weather HUD: an ambient FX layer over the whole canvas, plus a
+  // fixed top-right panel (icon + big temperature + condition + shift/load)
+  const overlay = renderOverlay(ctx);
+  const panel = renderPanel(ctx);
 
+  const status = statusLine(ctx);
   const ariaLabel = n === 1
     ? scenes[0].TITLE + ". " + scenes[0].caption(ctx) + ". Current conditions: " + status + "."
     : "A quiet " + n + "-scene film loop through a homelab story. Current conditions: " + status + ".";
@@ -261,11 +266,12 @@ export function compose(scenes, ctx) {
     STYLE_BLOCK,
     defsBlock,
     sceneGroups.join("\n"),
+    overlay,
     "<g>",
     dotBases.join("\n"),
     dotOverlays.join("\n"),
-    statusText,
     "</g>",
+    panel,
     "</svg>",
   ]
     .filter(Boolean)
