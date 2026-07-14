@@ -102,7 +102,19 @@ function main() {
   const env = readJson(ENV_FILE, "env");
   const ctx = buildCtx(world, env);
 
-  const doc = compose(SCENES, ctx);
+  // Time-based scene rotation (Toronto hour determines which chapter):
+  // 0-7: floor (s1)  |  8-15: layer1 (s4, cables)  |  16-23: bench (s6, cluster)
+  const hour = ctx.hourToronto;
+  let activeScene;
+  if (hour < 8) {
+    activeScene = SCENES[0]; // floor
+  } else if (hour < 16) {
+    activeScene = SCENES[1]; // layer1
+  } else {
+    activeScene = SCENES[2]; // bench
+  }
+
+  const doc = compose([activeScene], ctx);
 
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, doc, "utf8");
@@ -111,7 +123,9 @@ function main() {
     JSON.stringify({
       out,
       bytes: Buffer.byteLength(doc, "utf8"),
-      scenes: SCENES.map((s) => s.KEY),
+      activeScene: activeScene.KEY,
+      activeTitle: activeScene.TITLE,
+      hour,
       night: ctx.night,
       load: ctx.load,
       tempC: ctx.tempC,

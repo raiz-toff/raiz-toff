@@ -178,7 +178,7 @@ function validateDoc(doc) {
 
 // ── compose ────────────────────────────────────────────────────────────────
 export function compose(scenes, ctx) {
-  if (!Array.isArray(scenes) || scenes.length < 2) fail("need at least 2 scene modules");
+  if (!Array.isArray(scenes) || scenes.length < 1) fail("need at least 1 scene module");
   const n = scenes.length;
 
   const hoistedDefs = [];
@@ -218,26 +218,29 @@ export function compose(scenes, ctx) {
     if (10 + captionText.length * 0.62 * 11 > STAGE_W) fontSize = 10;
 
     const transform = "translate(" + fmt(tx) + " " + fmt(ty) + ") scale(" + fmt(s) + ")";
-    sceneGroups.push(
-      [
-        '<g opacity="0">',
-        windowAnimate(k, n),
-        '<g transform="' + transform + '">',
-        sh.out,
-        "</g>",
-        '<text x="10" y="389" font-size="' + fontSize + '" fill="var(--muted-foreground)">' +
-          esc(captionText) + "</text>",
-        "</g>",
-      ].join("\n")
+    const sceneGroup = [
+      '<g' + (n === 1 ? ' opacity="1"' : ' opacity="0"') + '>',
+    ];
+    if (n > 1) sceneGroup.push(windowAnimate(k, n));
+    sceneGroup.push(
+      '<g transform="' + transform + '">',
+      sh.out,
+      "</g>",
+      '<text x="10" y="389" font-size="' + fontSize + '" fill="var(--muted-foreground)">' +
+        esc(captionText) + "</text>",
+      "</g>"
     );
+    sceneGroups.push(sceneGroup.join("\n"));
 
-    // chapter dots: dim base always on, bright overlay windowed like the scene
-    const cx = 630 - (n - 1 - k) * 12;
-    dotBases.push('<circle cx="' + cx + '" cy="386" r="2.2" fill="var(--border)"/>');
-    dotOverlays.push(
-      '<circle cx="' + cx + '" cy="386" r="2.2" fill="var(--led-green)" opacity="0">' +
-        windowAnimate(k, n) + "</circle>"
-    );
+    // chapter dots: only show when cycling (n > 1)
+    if (n > 1) {
+      const cx = 630 - (n - 1 - k) * 12;
+      dotBases.push('<circle cx="' + cx + '" cy="386" r="2.2" fill="var(--border)"/>');
+      dotOverlays.push(
+        '<circle cx="' + cx + '" cy="386" r="2.2" fill="var(--led-green)" opacity="0">' +
+          windowAnimate(k, n) + "</circle>"
+      );
+    }
   });
 
   // status line: always visible, right-aligned above the dots
@@ -246,10 +249,9 @@ export function compose(scenes, ctx) {
     '<text x="630" y="379" text-anchor="end" font-size="9.5" fill="var(--hw-label-dim)">' +
     esc(status) + "</text>";
 
-  const ariaLabel =
-    "A quiet six-scene film loop through a homelab story: an imagined data center floor, " +
-    "its cold aisle, a rack of patch panels, the layer-1 cabling, the far end of a crossover, " +
-    "and the real bench in Toronto. Current conditions: " + status + ".";
+  const ariaLabel = n === 1
+    ? scenes[0].TITLE + ". " + scenes[0].caption(ctx) + ". Current conditions: " + status + "."
+    : "A quiet " + n + "-scene film loop through a homelab story. Current conditions: " + status + ".";
 
   const defsBlock = hoistedDefs.length ? "<defs>\n" + hoistedDefs.join("\n") + "\n</defs>" : "";
 
