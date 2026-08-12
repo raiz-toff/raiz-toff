@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="04 · layer 1. everything above this line is an abstraction. Current conditions: overcast · day shift · load ▁▁▁▁▁ · 23°c toronto.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="04 · layer 1. everything above this line is an abstraction. Current conditions: overcast · day shift · load ▁▁▁▁▁ · 25°c toronto.">
 <style>
     :root { color-scheme: light dark; }
     svg {
@@ -218,7 +218,7 @@
 <rect x="452" y="10" width="178" height="90" rx="9" fill="var(--muted)" fill-opacity="0.9" stroke="var(--border)" stroke-width="1"/>
 <text x="466" y="27" font-size="9" letter-spacing="2" fill="var(--hw-label-dim)">TORONTO</text>
 <g transform="translate(464 32)"><g><animateTransform attributeName="transform" type="translate" values="0 0;1.6 0;0 0" dur="6.4s" repeatCount="indefinite"/><g fill="var(--muted-foreground)" opacity="0.8"><circle cx="10" cy="13" r="6.2"/><circle cx="18" cy="9.5" r="7.4"/><circle cx="25.5" cy="13" r="5.6"/><rect x="5" y="13" width="23" height="8.4" rx="4.2"/></g></g></g>
-<text x="502" y="60" font-size="32" font-weight="700" fill="var(--foreground)">23°</text>
+<text x="502" y="60" font-size="32" font-weight="700" fill="var(--foreground)">25°</text>
 <text x="466" y="78" font-size="13" fill="var(--muted-foreground)">overcast</text>
 <text x="466" y="92" font-size="9" fill="var(--hw-label-dim)">day shift · load ▁▁▁▁▁</text>
 </g>
