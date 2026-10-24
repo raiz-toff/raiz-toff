@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 220" width="840" height="220" role="img" aria-labelledby="titleDark descDark">
+  <title id="titleDark">Rajkumar Neupane — Network &amp; Systems Technician</title>
+  <desc id="descDark">Toronto-based Network and Systems Technician. Four patch ports showing day job at Geek Squad City, home lab practice, 300+ documented labs, and local-first tools on GitHub.</desc>
+
+  <defs>
+    <pattern id="stripes-dark" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#222226" stroke-width="1.5" />
+    </pattern>
+
+    <!-- Reusable 18x16 RJ45 Jack Icon (crisp white on dark mode, pixel-aligned) -->
+    <g id="rj45-dark">
+      <rect x="0.5" y="0.5" width="17" height="15" rx="2.5" fill="#141418" stroke="#e4e4e7" stroke-width="1" />
+      <path d="M 3.5 12.5 H 14.5 V 6.5 H 11.5 V 3.5 H 6.5 V 6.5 H 3.5 Z" fill="#09090b" stroke="#fafafa" stroke-width="1" stroke-linejoin="round" />
+    </g>
+
+    <style>
+      .sans {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      }
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Card Background & Border -->
+  <rect x="0.5" y="0.5" width="839" height="219" fill="#0b0b0e" stroke="#27272a" stroke-width="1" />
+
+  <!-- Subtle Top Stripe Bar -->
+  <rect x="1" y="1" width="838" height="9" fill="#0f0f13" />
+  <rect x="1" y="1" width="838" height="9" fill="url(#stripes-dark)" />
+  <line x1="0" y1="10.5" x2="840" y2="10.5" stroke="#27272a" stroke-width="1" />
+
+  <!-- ===================================================================== -->
+  <!-- LEFT SIDE: IDENTITY (PLAIN & HUMAN)                                   -->
+  <!-- ===================================================================== -->
+
+  <!-- RN T568B Monogram Tile (from favicon.svg) -->
+  <g transform="translate(32, 34) scale(0.234375)">
+    <rect width="128" height="128" rx="26" fill="#1c1b18" stroke="#3f3f46" stroke-width="4" />
+    <g transform="translate(14.08,29.81) scale(0.1710)">
+      <polygon points="0,0 64,0 64,400 0,400" fill="#D9711F" />
+      <polygon points="192,0 256,0 256,232 192,232" fill="#2E7D46" />
+      <polygon points="76.07,208 147.93,208 245.93,400 174.07,400" fill="#2B5799" />
+      <polygon points="0,0 256,0 256,64 0,64" fill="#D9711F" />
+      <polygon points="0,168 256,168 256,232 0,232" fill="#2B5799" />
+      <polygon points="328,0 392,0 392,400 328,400" fill="#2E7D46" />
+      <polygon points="520,0 584,0 584,400 520,400" fill="#a16b47" />
+      <polygon points="347.88,0 416.12,0 564.12,400 495.88,400" fill="#a16b47" />
+    </g>
+  </g>
+
+  <text x="32" y="96" class="sans" font-size="22" font-weight="600" fill="#f4f4f5" letter-spacing="-0.02em">Rajkumar Neupane</text>
+  <text x="32" y="118" class="sans" font-size="13.5" fill="#a1a1aa">Network &amp; Systems Technician</text>
+
+  <line x1="32" y1="139.5" x2="284" y2="139.5" stroke="#27272a" stroke-width="1" stroke-dasharray="3 3" />
+
+  <text x="32" y="162" class="mono" font-size="11.5" fill="#a1a1aa">Kathmandu &#8594; Toronto</text>
+  <text x="32" y="183" class="mono" font-size="11.5" fill="#71717a">CCNA &#183; CCST Networking</text>
+
+  <!-- Vertical Divider -->
+  <line x1="316.5" y1="32" x2="316.5" y2="196" stroke="#27272a" stroke-width="1" />
+
+  <!-- ===================================================================== -->
+  <!-- RIGHT SIDE: 4 TWISTED-PAIR PORTS -> WHAT I ACTUALLY DO                -->
+  <!-- ===================================================================== -->
+
+  <!-- Port 01: Orange Pair (Day Job) -->
+  <use href="#rj45-dark" x="342" y="44" />
+  <line x1="360" y1="52" x2="385" y2="52" stroke="#D9711F" stroke-width="2" />
+  <circle cx="386" cy="52" r="2.5" fill="#D9711F" />
+  <text x="398" y="56" class="mono" font-size="11" fill="#a1a1aa">01 &#183; day job</text>
+  <text x="506" y="56.5" class="sans" font-size="13" fill="#e4e4e7">Testing &amp; repairing devices at Geek Squad City</text>
+
+  <!-- Port 02: Green Pair (Home Lab) -->
+  <use href="#rj45-dark" x="342" y="86" />
+  <line x1="360" y1="94" x2="385" y2="94" stroke="#2E7D46" stroke-width="2" />
+  <circle cx="386" cy="94" r="2.5" fill="#2E7D46" />
+  <text x="398" y="98" class="mono" font-size="11" fill="#a1a1aa">02 &#183; home lab</text>
+  <text x="506" y="98.5" class="sans" font-size="13" fill="#e4e4e7">Practicing routing &amp; switching on a home PC</text>
+
+  <!-- Port 03: Blue Pair (Notebook) -->
+  <use href="#rj45-dark" x="342" y="128" />
+  <line x1="360" y1="136" x2="385" y2="136" stroke="#3b82f6" stroke-width="2" />
+  <circle cx="386" cy="136" r="2.5" fill="#3b82f6" />
+  <text x="398" y="140" class="mono" font-size="11" fill="#a1a1aa">03 &#183; notebook</text>
+  <text x="506" y="140.5" class="sans" font-size="13" fill="#e4e4e7">300+ labs written down in plain English</text>
+
+  <!-- Port 04: Brown/Copper Pair (GitHub) -->
+  <use href="#rj45-dark" x="342" y="170" />
+  <line x1="360" y1="178" x2="385" y2="178" stroke="#a16b47" stroke-width="2" />
+  <circle cx="386" cy="178" r="2.5" fill="#a16b47" />
+  <text x="398" y="182" class="mono" font-size="11" fill="#a1a1aa">04 &#183; github</text>
+  <text x="506" y="182.5" class="sans" font-size="13" fill="#e4e4e7">Small local-first apps for everyday problems</text>
+</svg>

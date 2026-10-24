@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 136" width="840" height="136" role="img" aria-label="Network packet conduit animation">
+  <defs>
+    <style>
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      }
+      @keyframes dance {
+        0%   { transform: translate(0px, 0px) rotate(0deg); }
+        25%  { transform: translate(0px, -2px) rotate(2.5deg); }
+        50%  { transform: translate(0px, 0px) rotate(0deg); }
+        75%  { transform: translate(0px, -2px) rotate(-2.5deg); }
+        100% { transform: translate(0px, 0px) rotate(0deg); }
+      }
+      .dancing-cloud {
+        animation: dance 4s ease-in-out infinite;
+        transform-origin: 10px 10px;
+      }
+    </style>
+  </defs>
+
+  <!-- BASE CONDUITS (Dark Mode: #161b22 with #21262d subtle stroke) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Top Conduit -->
+    <path d="M -20 28 L 140 28 L 260 44 L 440 28 L 600 44 L 720 28 L 860 28" stroke="#161b22" stroke-width="10">
+      <animate attributeName="opacity" values="0.45; 0.9; 0.45" dur="3.5s" repeatCount="indefinite" />
+    </path>
+    <!-- Middle Conduit -->
+    <path d="M -20 60 L 140 60 L 260 44 L 440 60 L 600 76 L 720 60 L 860 60" stroke="#161b22" stroke-width="20">
+      <animate attributeName="opacity" values="0.55; 1; 0.55" dur="4s" repeatCount="indefinite" />
+    </path>
+    <!-- Bottom Conduit -->
+    <path d="M -20 92 L 140 92 L 260 76 L 440 92 L 600 76 L 720 92 L 860 92" stroke="#161b22" stroke-width="12">
+      <animate attributeName="opacity" values="0.5; 0.95; 0.5" dur="4.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- MOVING PACKET SPARKS (Twisted-pair colors: Orange, Blue, Green) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Spark on Top Conduit (Orange Pair) -->
+    <path d="M -20 28 L 140 28 L 260 44 L 440 28 L 600 44 L 720 28 L 860 28"
+          stroke="#f97316" stroke-width="2.5" stroke-dasharray="12 180">
+      <animate attributeName="stroke-dashoffset" from="384" to="0" dur="1.4s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Spark on Middle Conduit (Blue Pair) -->
+    <path d="M -20 60 L 140 60 L 260 44 L 440 60 L 600 76 L 720 60 L 860 60"
+          stroke="#3b82f6" stroke-width="3" stroke-dasharray="16 240">
+      <animate attributeName="stroke-dashoffset" from="512" to="0" dur="1.8s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Spark on Bottom Conduit (Green Pair) -->
+    <path d="M -20 92 L 140 92 L 260 76 L 440 92 L 600 76 L 720 92 L 860 92"
+          stroke="#22c55e" stroke-width="2.5" stroke-dasharray="14 200">
+      <animate attributeName="stroke-dashoffset" from="428" to="0" dur="1.6s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- JUNCTION NODES -->
+  <g fill="#30363d" stroke="#f0f6fc" stroke-width="1.5">
+    <circle cx="260" cy="44" r="4.5" />
+    <circle cx="600" cy="76" r="4.5" />
+  </g>
+
+  <!-- TERMINAL CONSOLE LINE -->
+  <g class="mono" font-size="12.5">
+    <text x="368" y="125" fill="#8b949e" text-anchor="end" letter-spacing="0.02em">&gt; let&#39;s get that</text>
+    <text x="375" y="125" fill="#f59e0b" font-weight="600" text-anchor="start" letter-spacing="0.02em">packet</text>
+    <text x="424" y="125" fill="#8b949e" text-anchor="start" letter-spacing="0.02em">moving</text>
+
+    <!-- Minimalist Dancing Cloud -->
+    <g transform="translate(476, 112)">
+      <g class="dancing-cloud">
+        <path d="M11.0947 8.02658C11.5476 5.73111 13.5717 4 16 4C18.7614 4 21 6.23858 21 9C21 11.0345 19.7849 12.7852 18.0408 13.5659M11.0947 8.02658C9.24194 8.21766 7.68947 9.4193 7 11C4.6 11.375 3 13.3144 3 15.4137C3 17.9466 5.14903 20 7.8 20L15 20C17.2091 20 19 18.2719 19 16.1402C19 15.1829 18.6388 14.2698 18.0408 13.5659M11.0947 8.02658C11.265 8.00902 11.4378 8 11.6127 8C14.2747 8 16.4504 9.99072 16.6 12.5C17.1583 12.7354 17.6501 13.106 18.0408 13.5659"
+              fill="none" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" transform="scale(0.72)" />
+      </g>
+    </g>
+
+    <!-- Blinking Cursor -->
+    <text x="498" y="125" fill="#f59e0b">_
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </text>
+  </g>
+</svg>
