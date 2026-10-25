@@ -52,6 +52,5 @@ Before moving into networking, I learned how to repair dead laptop motherboards 
     <a href="https://www.credly.com/users/rajkumarneupane">credly</a>
     &nbsp;·&nbsp;
     <a href="https://www.rajkumarneupane.com/about">contact</a>
->>>>>>> dbf14d8 (feat: add light and dark profile banners and animated network conduit SVGs to README)
   </sub>
 </p>
