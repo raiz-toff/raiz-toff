@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 220" width="840" height="220" role="img" aria-labelledby="titleLight descLight">
-  <title id="titleLight">Rajkumar Neupane — Network &amp; Systems Technician</title>
-  <desc id="descLight">Toronto-based Network and Systems Technician. Four patch ports showing day job at Geek Squad City, home lab practice, 300+ documented labs, and local-first tools on GitHub.</desc>
+  <title id="titleLight">Rajkumar Neupane — CCNA · Network Support &amp; NOC</title>
+  <desc id="descLight">CCNA- and CCST-certified, Toronto, aiming for network support and NOC roles. Four patch ports showing day job at Geek Squad City, home lab practice, 300+ documented labs, and local-first tools on GitHub.</desc>
 
   <defs>
     <pattern id="stripes-light" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
@@ -51,7 +51,7 @@
   </g>
 
   <text x="32" y="96" class="sans" font-size="22" font-weight="600" fill="#09090b" letter-spacing="-0.02em">Rajkumar Neupane</text>
-  <text x="32" y="118" class="sans" font-size="13.5" fill="#52525b">Network &amp; Systems Technician</text>
+  <text x="32" y="118" class="sans" font-size="13.5" fill="#52525b">Network Support &amp; NOC</text>
 
   <line x1="32" y1="139.5" x2="284" y2="139.5" stroke="#e4e4e7" stroke-width="1" stroke-dasharray="3 3" />
 
