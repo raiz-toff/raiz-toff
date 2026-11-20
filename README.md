@@ -8,7 +8,9 @@
 
 <br />
 
-Before moving into networking, I learned how to repair dead laptop motherboards in Kathmandu with a multimeter, a soldering iron, and board schematics. Tracing power across circuits taught me to find where things actually fail instead of guessing, and that is still how I approach networks and software today.
+Make to break to make to break ............ akhhhh. ••-
+
+Home lab stuff, network tools, and whatever I'm building this month. Poke around, open an issue if something's broken.
 
 <p align="center">
   <picture>
@@ -19,21 +21,14 @@ Before moving into networking, I learned how to repair dead laptop motherboards 
 </p>
 
 <p align="center">
-  <a href="https://www.rajkumarneupane.com/docs/ccna-labs"><b>CCNA lab guides</b></a>
-  &nbsp;·&nbsp;
-  <a href="https://www.rajkumarneupane.com/docs/labs"><b>Home lab write-ups</b></a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/raiz-toff/Marrow"><b>Marrow</b></a>: network diagrams compiled from YAML
+  <a href="https://www.rajkumarneupane.com/docs/ccna-labs"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/link-ccna-dark.svg" /><img alt="CCNA lab guides: 300+ labs in plain English" src="./assets/link-ccna-light.svg" width="32%" /></picture></a>
+  <a href="https://www.rajkumarneupane.com/docs/labs"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/link-homelab-dark.svg" /><img alt="Home lab write-ups: routing and switching at home" src="./assets/link-homelab-light.svg" width="32%" /></picture></a>
+  <a href="https://github.com/raiz-toff/Marrow"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/link-marrow-dark.svg" /><img alt="Marrow: diagrams compiled from YAML" src="./assets/link-marrow-light.svg" width="32%" /></picture></a>
 </p>
 
 <p align="center">
-  <sub>
-    <a href="https://www.rajkumarneupane.com">rajkumarneupane.com</a>
-    &nbsp;·&nbsp;
-    <a href="https://www.linkedin.com/in/rjneupane">linkedin</a>
-    &nbsp;·&nbsp;
-    <a href="https://www.credly.com/users/rajkumarneupane">credly</a>
-    &nbsp;·&nbsp;
-    <a href="https://www.rajkumarneupane.com/about">contact</a>
-  </sub>
+  <a href="https://www.rajkumarneupane.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/pill-website-dark.svg" /><img alt="rajkumarneupane.com" src="./assets/pill-website-light.svg" height="32" /></picture></a>
+  <a href="https://www.linkedin.com/in/rjneupane"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/pill-linkedin-dark.svg" /><img alt="LinkedIn" src="./assets/pill-linkedin-light.svg" height="32" /></picture></a>
+  <a href="https://www.credly.com/users/rajkumarneupane"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/pill-credly-dark.svg" /><img alt="Credly" src="./assets/pill-credly-light.svg" height="32" /></picture></a>
+  <a href="https://www.rajkumarneupane.com/about"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/pill-contact-dark.svg" /><img alt="Contact" src="./assets/pill-contact-light.svg" height="32" /></picture></a>
 </p>
